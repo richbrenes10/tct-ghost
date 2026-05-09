@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(182, 95, 66, 0.12), transparent 32%),
+    radial-gradient(circle at right center, rgba(96, 112, 92, 0.12), transparent 28%),
+    linear-gradient(180deg, #f7f2eb 0%, #f4ece3 100%);
+  color: #171717;
+  font-family: Inter, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
