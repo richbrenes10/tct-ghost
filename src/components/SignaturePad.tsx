@@ -7,7 +7,11 @@ type Point = {
   y: number;
 };
 
-export function SignaturePad() {
+type SignaturePadProps = {
+  onChange?: (signature: string) => void;
+};
+
+export function SignaturePad({ onChange }: SignaturePadProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const contextRef = useRef<CanvasRenderingContext2D | null>(null);
   const drawingRef = useRef(false);
@@ -87,6 +91,8 @@ export function SignaturePad() {
     context.stroke();
     lastPointRef.current = point;
     setHasSignature(true);
+    const canvas = canvasRef.current;
+    if (canvas) onChange?.(canvas.toDataURL("image/png"));
   };
 
   const stopDrawing = (event: PointerEvent<HTMLCanvasElement>) => {
@@ -106,6 +112,7 @@ export function SignaturePad() {
     drawingRef.current = false;
     lastPointRef.current = null;
     setHasSignature(false);
+    onChange?.("");
   };
 
   return (

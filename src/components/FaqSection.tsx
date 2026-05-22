@@ -4,8 +4,8 @@ const faqs = [
     a: "Llena el formulario y el estudio revisa tu información antes de confirmar la sesión.",
   },
   {
-    q: "¿Puedo conocer a los artistas antes de agendar?",
-    a: "Sí. La sección de artistas muestra perfiles y fotos para que elijas con más claridad.",
+    q: "¿Puedo ver el estilo de Ghost antes de agendar?",
+    a: "Si. La galeria muestra referencias de letras, sombras y piezas del estilo que trabaja.",
   },
   {
     q: "¿Qué pasa después de enviar el formulario?",

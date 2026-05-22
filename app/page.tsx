@@ -4,7 +4,6 @@ import { FeaturesSection } from "@/components/FeaturesSection";
 import { ArtistsSection } from "@/components/ArtistsSection";
 import { FaqSection } from "@/components/FaqSection";
 import { RecommendationsSection } from "@/components/RecommendationsSection";
-import { AppointmentForm } from "@/components/AppointmentForm";
 import { Footer } from "@/components/Footer";
 
 export default function HomePage() {
@@ -16,7 +15,6 @@ export default function HomePage() {
       <ArtistsSection />
       <FaqSection />
       <RecommendationsSection />
-      <AppointmentForm />
       <Footer />
     </main>
   );

@@ -1,38 +1,28 @@
-const items = [
-  {
-    title: "About",
-    text: "Una estructura clara para que el cliente entienda el estudio y su proceso antes de agendar.",
-  },
-  {
-    title: "FAQs",
-    text: "Respuestas rápidas sobre cita, preparación, consentimiento y seguimiento.",
-  },
-  {
-    title: "Citas",
-    text: "Un acceso directo al formulario para reservar sin perder el hilo de la navegación.",
-  },
-];
-
 export function FeaturesSection() {
   return (
-    <section id="about" className="px-5 py-16 lg:px-8">
-      <div className="mx-auto max-w-7xl space-y-10">
-        <div className="max-w-3xl space-y-3">
+    <section id="about" className="px-5 py-14 lg:px-8 lg:py-20">
+      <div className="mx-auto grid max-w-7xl gap-8 border-y border-black/10 py-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+        <div className="space-y-3">
           <p className="text-xs font-black uppercase tracking-[0.3em] text-accentDark">About</p>
-          <h2 className="text-3xl font-black tracking-tight text-ink sm:text-4xl">Estructura simple y directa</h2>
-          <p className="text-base leading-7 text-black/65 sm:text-lg">
-            La navegación sigue una lógica de portafolio de estudio: portada, artistas, FAQs y una llamada clara a reservar.
-          </p>
+          <h2 className="text-3xl font-black tracking-tight text-ink sm:text-4xl">EDGAR GARCIA | LETRAS Y SOMBRAS</h2>
         </div>
-
-        <div className="grid gap-5 lg:grid-cols-3">
-          {items.map((item, index) => (
-            <article key={item.title} className="rounded-[1.75rem] border border-black/10 bg-white/80 p-6 shadow-soft backdrop-blur">
-              <p className="text-sm font-black uppercase tracking-[0.24em] text-accentDark">0{index + 1}</p>
-              <h3 className="mt-3 text-2xl font-black text-ink">{item.title}</h3>
-              <p className="mt-3 text-sm leading-6 text-black/65">{item.text}</p>
-            </article>
-          ))}
+        <div className="space-y-5 text-base leading-8 text-black/65 sm:text-lg">
+          <p>
+            El lettering en tatuajes dibuja letras y frases a medida para darles una identidad propia. Cada palabra se trabaja como composicion: lectura, peso visual, ritmo y adaptacion al cuerpo.
+          </p>
+          <p>
+            El sombreado define luz, volumen y profundidad. Puede levantar una frase con efecto 3D, separarla de la piel con una sombra suave o darle un caracter mas oscuro con negros profundos.
+          </p>
+          <div className="grid gap-4 text-sm leading-7 text-black/65 sm:grid-cols-2">
+            <div>
+              <h3 className="font-black text-ink">Estilos</h3>
+              <p>Chicano, gotico, script y dark lettering, segun la zona, el tamano y la fuerza que pida la pieza.</p>
+            </div>
+            <div>
+              <h3 className="font-black text-ink">Sombras</h3>
+              <p>Drop shadow, relieve, brillos e iluminacion para que el texto tenga contraste y presencia.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

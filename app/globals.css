@@ -28,3 +28,27 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.portfolio-track {
+  animation: portfolio-scroll 42s linear infinite;
+}
+
+.portfolio-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes portfolio-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 0.75rem));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-track {
+    animation: none;
+  }
+}
